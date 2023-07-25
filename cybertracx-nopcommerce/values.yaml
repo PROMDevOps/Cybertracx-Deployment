@@ -1,4 +1,4 @@
-
+### PostgreSQL ###
 postgresql-nopc:
   enabled: true
   fullnameOverride: postgresql-nopc
@@ -7,3 +7,42 @@ postgresql-nopc:
     existingSecret: nopc-postgres-secret
     secretKeys:
       adminPasswordKey: adminPasswordKey
+
+### NopCommerce ###
+nopCommerce:
+  enabled: true
+  nameOverride: nopcommerce
+
+  podDisruptionBudget:
+    enabled: false
+
+  pods:
+    controller: statefulset
+    image:
+      name: nopcommerceteam/nopcommerce
+      tag: 4.60.3
+    #volumes:
+    #  - name: appsetting
+    #    secret:
+    #      secretName: carpark-api-appsetting
+    #      optional: false
+    #volumeMounts:
+    #  - name: appsetting
+    #    mountPath: /app/appsettings.json
+    #    subPath: appsettings.json
+  service:
+    enabled: true
+    ports:
+      - port: 80
+        targetPort: 80
+        protocol: TCP
+        name: http
+
+  ingress:
+    enabled: false
+
+  pods:
+    env:
+      # To solve ulimit(128) issue
+      - name: DOTNET_USE_POLLING_FILE_WATCHER
+        value: "true"

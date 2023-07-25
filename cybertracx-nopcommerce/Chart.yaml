@@ -15,3 +15,10 @@ dependencies:
     condition: postgresql-nopc.enabled
     repository: "https://charts.bitnami.com/bitnami"
     version: "12.5.7"
+
+  ### nopCommerce ###
+  - name: "generic-app"
+    alias: nopCommerce
+    condition: nopCommerce.enabled
+    repository: "https://charts.visonneau.fr/"
+    version: "0.0.14"
