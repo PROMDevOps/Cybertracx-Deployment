@@ -1,0 +1,9 @@
+
+postgresql-nopc:
+  enabled: true
+  fullnameOverride: postgresql-nopc
+  auth:
+    database: nopcommerce
+    existingSecret: nopc-postgres-secret
+    secretKeys:
+      adminPasswordKey: adminPasswordKey

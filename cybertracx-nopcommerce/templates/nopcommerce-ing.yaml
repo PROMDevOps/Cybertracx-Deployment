@@ -1,0 +1,23 @@
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: nopcommerce-ing
+  annotations:
+    nginx.ingress.kubernetes.io/backend-protocol: HTTP  
+    kubernetes.io/ingress.class: "nginx"
+spec:
+  tls:
+    - hosts:
+      - {{ .Values.domainNopCommerce }}
+      secretName: nopcommerce-cert
+  rules:
+    - host: {{ .Values.domainNopCommerce }}
+      http:
+        paths:
+          - path: /
+            pathType: Prefix
+            backend:
+              service:
+                name: nopcommerce-http
+                port:
+                  number: 80
