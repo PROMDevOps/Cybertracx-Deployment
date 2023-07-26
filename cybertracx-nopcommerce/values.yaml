@@ -15,15 +15,13 @@ nop-commerce:
       # To solve ulimit(128) issue
       - name: DOTNET_USE_POLLING_FILE_WATCHER
         value: "true"
-    #volumes:
-    #  - name: appsetting
-    #    secret:
-    #      secretName: carpark-api-appsetting
-    #      optional: false
-    #volumeMounts:
-    #  - name: appsetting
-    #    mountPath: /app/appsettings.json
-    #    subPath: appsettings.json
+    volumes:
+      - name: data
+        persistentVolumeClaim:
+          claimName: nopcommerce-data-pvc
+    volumeMounts:
+      - name: data
+        mountPath: /app/App_Data
   service:
     enabled: true
     ports:
@@ -47,6 +45,7 @@ postgresql-nopc:
 
 ### PG Web ###
 pgweb:
+  # create extension citext;
   enabled: true
   nameOverride: pgweb
   ingress:
