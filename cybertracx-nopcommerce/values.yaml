@@ -21,7 +21,7 @@ nop-commerce:
           claimName: nopcommerce-data-pvc
     volumeMounts:
       - name: data
-        mountPath: /app/App_Data
+        mountPath: /app/App_Data/DataProtectionKeys
   service:
     enabled: true
     ports:
