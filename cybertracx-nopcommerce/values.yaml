@@ -23,6 +23,8 @@ nop-commerce:
       - name: data
         mountPath: /app/App_Data/appsettings.json
         subPath: appsettings.json
+    securityContext:
+      runAsUser: 0
   service:
     enabled: true
     ports:
