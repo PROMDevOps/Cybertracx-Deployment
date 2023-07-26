@@ -17,10 +17,10 @@ nopCommerce:
     enabled: false
 
   pods:
-    controller: statefulset
+    controller: deployment
     image:
-      name: nopcommerceteam/nopcommerce
-      tag: 4.60.3
+      name: "nopcommerceteam/nopcommerce"
+      tag: "4.60.3"
     #volumes:
     #  - name: appsetting
     #    secret:
