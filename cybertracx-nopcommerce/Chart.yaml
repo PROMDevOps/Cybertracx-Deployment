@@ -22,3 +22,10 @@ dependencies:
     condition: nop-commerce.enabled
     repository: "https://charts.visonneau.fr/"
     version: "0.0.17"
+  
+  ### PG Web ###
+  - name: "pgweb"
+    alias: pgweb
+    condition: pgweb.enabled
+    repository: "https://charts.ectobit.com"
+    version: "0.1.8"

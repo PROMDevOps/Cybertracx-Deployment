@@ -44,3 +44,10 @@ postgresql-nopc:
     existingSecret: nopc-postgres-secret
     secretKeys:
       adminPasswordKey: adminPasswordKey
+
+### PG Web ###
+pgweb:
+  enabled: true
+  nameOverride: pgweb
+  ingress:
+    enabled: false
