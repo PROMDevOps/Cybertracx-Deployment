@@ -1,15 +1,5 @@
-### PostgreSQL ###
-postgresql-nopc:
-  enabled: true
-  fullnameOverride: postgresql-nopc
-  auth:
-    database: nopcommerce
-    existingSecret: nopc-postgres-secret
-    secretKeys:
-      adminPasswordKey: adminPasswordKey
-
 ### NopCommerce ###
-nopCommerce:
+nop-commerce:
   enabled: true
   nameOverride: nopcommerce
 
@@ -21,6 +11,10 @@ nopCommerce:
     image:
       name: "nopcommerceteam/nopcommerce"
       tag: "4.60.3"
+    env:
+      # To solve ulimit(128) issue
+      - name: DOTNET_USE_POLLING_FILE_WATCHER
+        value: "true"
     #volumes:
     #  - name: appsetting
     #    secret:
@@ -41,8 +35,12 @@ nopCommerce:
   ingress:
     enabled: false
 
-  pods:
-    env:
-      # To solve ulimit(128) issue
-      - name: DOTNET_USE_POLLING_FILE_WATCHER
-        value: "true"
+### PostgreSQL ###
+postgresql-nopc:
+  enabled: true
+  fullnameOverride: postgresql-nopc
+  auth:
+    database: nopcommerce
+    existingSecret: nopc-postgres-secret
+    secretKeys:
+      adminPasswordKey: adminPasswordKey
