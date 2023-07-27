@@ -2,3 +2,6 @@ magento:
   enabled: true
   nameOverride: magento
   fullnameOverride: magento
+
+  service:
+    type: ClusterIP
