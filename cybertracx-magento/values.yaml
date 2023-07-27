@@ -11,6 +11,8 @@ magento:
     type: ClusterIP
     ports:
       http: 80
-  mariadb:
-    auth:
-      password: xxxxmagentoxxxxx
+  externalDatabase:
+    existingSecret: mariadb-secret
+  #mariadb:
+  #  auth:
+  #    password: xxxxmagentoxxxxx
