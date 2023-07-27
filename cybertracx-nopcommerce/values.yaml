@@ -2,13 +2,13 @@ magento:
   enabled: true
   nameOverride: magento
   fullnameOverride: magento
-  magentoUseSecureAdmin: true
 
+  ### To change the configuration, may need to delete PVC for the changes to take effect.
+  magentoUseSecureAdmin: true
   service:
     type: ClusterIP
     ports:
       http: 80
-
   mariadb:
     auth:
       password: xxxxmagentoxxxxx
