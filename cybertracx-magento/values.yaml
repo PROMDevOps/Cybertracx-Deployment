@@ -5,6 +5,8 @@ magento:
 
   ### To change the configuration, may need to delete PVC for the changes to take effect.
   magentoUseSecureAdmin: true
+  magentoUsername: admin
+  magentoPassword: password
   service:
     type: ClusterIP
     ports:
