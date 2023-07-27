@@ -1,6 +1,6 @@
 ### NopCommerce ###
 nop-commerce:
-  enabled: true
+  enabled: false
   nameOverride: nopcommerce
 
   podDisruptionBudget:
