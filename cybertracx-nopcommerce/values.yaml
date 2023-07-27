@@ -5,6 +5,8 @@ magento:
 
   service:
     type: ClusterIP
+    ports:
+      http: 80
 
   mariadb:
     auth:
