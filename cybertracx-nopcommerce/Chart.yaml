@@ -1,31 +1,14 @@
 apiVersion: v2
-name: helm-cybertracx
-description: A Helm chart for Cybertracx
-
+name: helm-magento
+description: A Helm chart for Magento
 type: application
-
 version: 1.0.0
-
 appVersion: "1.0"
 
 dependencies:
-  ### pgSQL ###
-  - name: "postgresql"
-    alias: postgresql-nopc
-    condition: postgresql-nopc.enabled
+  ### Magento ###
+  - name: "magento"
+    alias: magento
+    condition: magento.enabled
     repository: "https://charts.bitnami.com/bitnami"
-    version: "12.5.7"
-
-  ### nopCommerce ###
-  - name: "generic-app"
-    alias: nop-commerce
-    condition: nop-commerce.enabled
-    repository: "https://charts.visonneau.fr/"
-    version: "0.0.17"
-  
-  ### PG Web ###
-  - name: "pgweb"
-    alias: pgweb
-    condition: pgweb.enabled
-    repository: "https://charts.ectobit.com"
-    version: "0.1.8"
+    version: "22.1.7"
