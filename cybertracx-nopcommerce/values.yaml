@@ -2,7 +2,11 @@ magento:
   enabled: true
   nameOverride: magento
   fullnameOverride: magento
-  allowEmptyPassword: true
+  #allowEmptyPassword: true
 
   service:
     type: ClusterIP
+
+  mariadb:
+    auth:
+      password: xxxxmagentoxxxxx
