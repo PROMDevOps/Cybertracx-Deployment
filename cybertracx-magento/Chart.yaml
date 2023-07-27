@@ -1,0 +1,14 @@
+apiVersion: v2
+name: helm-magento
+description: A Helm chart for Magento
+type: application
+version: 1.0.0
+appVersion: "1.0"
+
+dependencies:
+  ### Magento ###
+  - name: "magento"
+    alias: magento
+    condition: magento.enabled
+    repository: "https://charts.bitnami.com/bitnami"
+    version: "22.1.7"

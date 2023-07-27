@@ -1,0 +1,16 @@
+magento:
+  enabled: true
+  nameOverride: magento
+  fullnameOverride: magento
+
+  ### To change the configuration, may need to delete PVC for the changes to take effect.
+  magentoUseSecureAdmin: true
+  magentoUsername: admin
+  existingSecret: magento # Must be the same name as $nameOverride
+  service:
+    type: ClusterIP
+    ports:
+      http: 80
+  mariadb:
+    auth:
+      password: xxxxmagentoxxxxx # TODO : Move this to existing secret
