@@ -11,7 +11,3 @@ magento:
     type: ClusterIP
     ports:
       http: 80
-  mariadb:
-    auth:
-      #password: xxxxmagentoxxxxx # TODO : Move this to existing secret
-      existingSecret: mariadb-db-login
