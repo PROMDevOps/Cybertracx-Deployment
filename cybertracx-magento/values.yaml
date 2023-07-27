@@ -6,7 +6,7 @@ magento:
   ### To change the configuration, may need to delete PVC for the changes to take effect.
   magentoUseSecureAdmin: true
   magentoUsername: admin
-  magentoPassword: passwordsEs124AA
+  existingSecret: magento # Must be the same name as $nameOverride
   service:
     type: ClusterIP
     ports:
