@@ -2,6 +2,7 @@ magento:
   enabled: true
   nameOverride: magento
   fullnameOverride: magento
+  allowEmptyPassword: true
 
   service:
     type: ClusterIP
