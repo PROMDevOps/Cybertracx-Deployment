@@ -8,6 +8,8 @@ metadata:
     nginx.org/proxy-buffer-size: "128k"
     nginx.org/proxy-buffers: "4 256k"
     nginx.org/proxy-busy-buffers-size: "256k"
+    nginx.org/fastcgi-buffers: "16 16k"
+    nginx.org/fastcgi-buffer-size: "32k"
 spec:
   tls:
     - hosts:
