@@ -7,6 +7,7 @@ metadata:
     nginx.ingress.kubernetes.io/backend-protocol: HTTP
     nginx.org/proxy-buffer-size: "128k"
     nginx.org/proxy-buffers: "4 256k"
+    nginx.org/proxy-busy-buffers-size: "256k"
 spec:
   tls:
     - hosts:
