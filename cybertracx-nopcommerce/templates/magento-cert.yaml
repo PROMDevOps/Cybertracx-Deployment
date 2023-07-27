@@ -1,11 +1,11 @@
 apiVersion: cert-manager.io/v1
 kind: Certificate
 metadata:
-  name: nopcommerce-cert
+  name: magento-cert
 spec:
-  secretName: nopcommerce-cert
+  secretName: magento-cert
   dnsNames:
-    - {{ .Values.domainNopCommerce }}
+    - {{ .Values.domainMagento }}
   issuerRef:
     name: lets-encrypt-issuer-prod
     kind: ClusterIssuer
