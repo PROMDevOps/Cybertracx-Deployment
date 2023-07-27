@@ -2,4 +2,4 @@ envAlias: development
 domainMagento: shop-dev.wintech-thai.com
 
 magento:
-  magentoHost: shop-dev.wintech-thai.com
+  #magentoHost: shop-dev.wintech-thai.com
