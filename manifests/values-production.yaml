@@ -6,3 +6,7 @@ magento:
   mariadb:
     auth:
       existingSecret: wtt-production-mariadb
+
+wordpress:
+  externalDatabase:
+    host: wtt-production-mysql

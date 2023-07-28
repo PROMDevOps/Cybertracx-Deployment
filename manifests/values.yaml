@@ -1,3 +1,4 @@
+### Magento ###
 magento:
   enabled: true
   nameOverride: magento
@@ -11,3 +12,35 @@ magento:
     type: ClusterIP
     ports:
       http: 80
+
+### Wordpress ###
+wordpress:
+  enabled: true
+  replicaCount: 1
+  wordpressScheme: https
+  wordpressUsername: admin
+  existingSecret: 'wordpress-user-login'
+
+  readinessProbe:
+    enabled: false
+
+  ingress:
+    enabled: false
+
+  service:
+    type: ClusterIP
+
+  mariadb:
+    enabled: false
+
+  externalDatabase:
+    port: 3306
+    database: wordpress
+    user: root
+    existingSecret: wordpress-db-login
+
+mysql:
+  enabled: true
+  auth:
+    database: wordpress
+    existingSecret: wordpress-db-login
