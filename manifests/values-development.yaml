@@ -5,4 +5,4 @@ magento:
   magentoHost: shop-dev.wintech-thai.com
   mariadb:
     auth:
-      existingSecret: magento-development-mariadb
+      existingSecret: wtt-development-mariadb
