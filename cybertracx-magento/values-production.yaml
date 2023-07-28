@@ -3,3 +3,6 @@ domainMagento: shop.wintech-thai.com
 
 magento:
   magentoHost: shop.wintech-thai.com
+  mariadb:
+    auth:
+      existingSecret: magento-production-mariadb
