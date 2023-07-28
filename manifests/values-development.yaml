@@ -1,5 +1,6 @@
 envAlias: development
 domainMagento: shop-dev.wintech-thai.com
+domainWordpress: web.wintech-thai.com
 
 magento:
   magentoHost: shop-dev.wintech-thai.com
