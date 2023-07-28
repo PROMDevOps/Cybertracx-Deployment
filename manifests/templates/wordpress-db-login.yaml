@@ -23,4 +23,4 @@ spec:
   - secretKey: "mariadb-password" # For MariaDB
     remoteRef:
       key: initial-secret
-      property: MARIADB_APP_PASSWORD
+      property: MARIADB_ROOT_PASSWORD
