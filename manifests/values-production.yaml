@@ -1,8 +1,13 @@
 envAlias: production
 domainMagento: shop.wintech-thai.com
+domainWordpress: wintech-thai.com
 
 magento:
   magentoHost: shop.wintech-thai.com
   mariadb:
     auth:
       existingSecret: wtt-production-mariadb
+
+wordpress:
+  externalDatabase:
+    host: wtt-production-mysql

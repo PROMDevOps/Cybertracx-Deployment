@@ -12,3 +12,14 @@ dependencies:
     condition: magento.enabled
     repository: "https://charts.bitnami.com/bitnami"
     version: "22.1.7"
+
+  ### Wordpress ###
+  - name: wordpress
+    version: "16.1.11"
+    repository: "https://charts.bitnami.com/bitnami"
+    condition: wordpress.enabled
+
+  - name: mysql
+    version: "9.10.1"
+    repository: "https://charts.bitnami.com/bitnami"
+    condition: mysql.enabled
