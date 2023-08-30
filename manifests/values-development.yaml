@@ -9,5 +9,6 @@ magento:
       existingSecret: wtt-development-mariadb
 
 wordpress:
+  enabled: false # Not deploy on Dev environment
   externalDatabase:
     host: wtt-development-mysql
