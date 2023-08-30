@@ -12,3 +12,6 @@ wordpress:
   enabled: false # Not deploy on Dev environment
   externalDatabase:
     host: wtt-development-mysql
+
+mysql:
+  enabled: false # Not deploy on Dev environment
